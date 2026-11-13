@@ -1,0 +1,587 @@
+.box-card {
+  border-color: color-mix(in srgb, var(--box-color) 55%, #183775);
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    color-mix(in srgb, var(--box-color) 30%, #263e7c),
+    #183b79 75%
+  );
+}
+.box-card.box-4 {
+  background: radial-gradient(ellipse at 50% 30%, #296d61, #1e4669 75%);
+}
+.box-card.box-5 {
+  background: radial-gradient(ellipse at 50% 30%, #6254ac, #2c3772 75%);
+}
+.box-card .box-unlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: -3px 0 10px;
+  font-size: 10px;
+  color: #ffe39a;
+}
+.box-unlock img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+.box-card .box-special {
+  display: block;
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #cbdfff;
+}
+.box-card > .primary > .themed-icon {
+  width: 22px;
+  height: 22px;
+}
+.daily-box-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 14px;
+}
+.daily-box-preview > img {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 8px #11274e99);
+}
+.daily-box-preview strong {
+  font-size: 15px;
+  color: #fff09a;
+}
+.daily-box-preview p {
+  font-size: 12px;
+  margin: 5px 0 !important;
+  line-height: 1.4;
+}
+.daily-box-preview .themed-icon {
+  width: 21px;
+  height: 21px;
+}
+.box-opening {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+  padding: 22px 18px 18px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 40%, #2f65bb, #112a66 72%);
+  border: 3px solid var(--box-color);
+  border-radius: 20px;
+  color: #fff;
+  min-height: 440px;
+}
+.box-opening h2 {
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 1000;
+  text-shadow: 0 3px 0 #112043;
+  position: relative;
+  z-index: 2;
+  margin: 20px 0 0;
+}
+.box-opening .eyebrow {
+  color: #c6e4ff;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.reveal-skip {
+  position: absolute;
+  right: 12px;
+  top: 11px;
+  border: 1px solid #b7d4ff55;
+  border-radius: 7px;
+  padding: 5px 8px;
+  background: #123a7b;
+  color: #cfe4ff;
+  font-size: 10px;
+  z-index: 4;
+}
+.reveal-chest {
+  position: relative;
+  width: min(310px, 85%);
+  height: 255px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  isolation: isolate;
+}
+.reveal-chest > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px var(--box-color));
+  animation: lootShake 0.45s ease-out;
+  pointer-events: none;
+}
+.loot-rays {
+  position: absolute;
+  z-index: -1;
+  inset: 4%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 20deg,
+    #8ecaff3d 0 10deg,
+    transparent 10deg 28deg
+  );
+  mask-image: radial-gradient(closest-side, #000, transparent);
+  rotate: 20deg;
+  scale: 1.5;
+  pointer-events: none;
+}
+.charge-1 .reveal-chest > img {
+  filter: drop-shadow(0 0 25px #e8d2ff);
+  scale: 1.04;
+}
+.charge-2 .reveal-chest > img {
+  filter: drop-shadow(0 0 30px #ffef9e);
+  scale: 1.08;
+}
+.chest-sparks {
+  position: absolute;
+  top: 14%;
+  right: 9%;
+  font-size: 37px;
+  color: #fff5c1;
+  rotate: 15deg;
+  pointer-events: none;
+}
+.charge-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 0 12px;
+}
+.charge-dots i {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #acccff;
+  border-radius: 50%;
+  background: #183d7a;
+  box-shadow: 0 3px 0 #0a1842;
+}
+.charge-dots i.lit {
+  background: #ffdc4b;
+  border-color: #fff7bb;
+  box-shadow: 0 0 18px #ffcd70;
+}
+.box-opening > p {
+  font-size: 12px;
+  margin: 8px 0 15px;
+  color: #d9eaff;
+}
+.box-opening .reveal-next {
+  max-width: 390px;
+  margin: 0 auto;
+  font-size: 16px;
+  min-height: 46px;
+}
+.reveal-safe {
+  display: block;
+  font-size: 9px;
+  color: #bbd6fa;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+.loot-reveal-card {
+  width: min(300px, 90%);
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 8px;
+  border: 3px solid #b5d4ff;
+  border-radius: 22px;
+  background: radial-gradient(ellipse, #4d90d0, #174b9b);
+  box-shadow:
+    0 10px 0 #081f5688,
+    0 0 45px #8edbff66;
+  animation: lootReveal 0.4s ease-out;
+}
+.loot-reveal-card > .themed-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 3px #0005);
+}
+.loot-reveal-card > strong {
+  font-size: 42px;
+  font-weight: 1000;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 4px 0 #173478;
+  margin-top: 8px;
+}
+.loot-reveal-card.power {
+  background: radial-gradient(ellipse, #b64a9b, #562c91);
+  border-color: #ffb9e6;
+}
+.loot-reveal-card.gem {
+  background: radial-gradient(ellipse, #41a273, #1c5e75);
+  border-color: #b1ffc7;
+}
+.loot-reveal-card.brawler {
+  background: radial-gradient(
+    ellipse,
+    color-mix(in srgb, var(--rarity) 60%, #212e83),
+    #1a3273
+  );
+  border-color: var(--rarity);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--rarity) 45%, transparent);
+}
+.loot-reveal-card.brawler > img {
+  width: 165px;
+  height: 165px;
+  object-fit: contain;
+  border: 3px solid var(--rarity);
+  border-radius: 22px;
+  background: #173569;
+}
+.loot-reveal-card.brawler > strong {
+  font-size: 24px;
+}
+.loot-reveal-card.brawler > small {
+  font-size: 10px;
+  color: #ffe8a9;
+  margin-top: 7px;
+}
+.rewards-left {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  margin: 15px 0 14px;
+  color: #ffe59a;
+}
+@keyframes lootShake {
+  0% {
+    transform: rotate(-5deg) scale(0.95);
+  }
+  25% {
+    transform: rotate(5deg) scale(1.08);
+  }
+  55% {
+    transform: rotate(-4deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes lootReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 760px) {
+  .box-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .box-card {
+    padding: 14px 10px;
+  }
+  .box-card h2 {
+    font-size: 19px;
+    line-height: 1.1;
+    min-height: 42px;
+  }
+  .box-card .box-art {
+    height: 145px;
+  }
+  .box-card .box-art img {
+    height: 145px;
+    width: 100%;
+  }
+  .box-card .box-art > span {
+    font-size: 17px;
+    padding: 7px;
+  }
+  .box-card > .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .box-card > p {
+    font-size: 9px;
+    line-height: 1.5;
+    min-height: 40px;
+  }
+  .box-card .primary {
+    font-size: 11px;
+    padding: 9px 6px;
+    gap: 4px;
+    min-height: 43px;
+  }
+  .box-card .primary .themed-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .box-card .ad-button {
+    font-size: 8px;
+    line-height: 1.35;
+    min-height: 39px;
+    padding: 7px 5px;
+  }
+  .box-card .box-special {
+    font-size: 8px;
+  }
+  .box-card .box-unlock {
+    font-size: 8px;
+  }
+  .daily-box-preview {
+    gap: 10px;
+  }
+  .daily-box-preview > img {
+    width: 90px;
+    height: 90px;
+  }
+  .daily-box-preview strong {
+    font-size: 13px;
+  }
+  .daily-box-preview p {
+    font-size: 10px;
+  }
+  .box-opening {
+    padding: 19px 12px 15px;
+    min-height: 410px;
+  }
+  .box-opening h2 {
+    font-size: 24px;
+    margin-top: 22px;
+  }
+  .reveal-chest {
+    height: 235px;
+  }
+  .loot-reveal-card {
+    height: 240px;
+  }
+  .loot-reveal-card.brawler > img {
+    width: 145px;
+    height: 145px;
+  }
+  .box-opening .reveal-next {
+    font-size: 13px;
+  }
+  .box-opening > p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .box-grid {
+    gap: 9px;
+  }
+  .box-card {
+    padding: 12px 7px;
+  }
+  .box-card h2 {
+    font-size: 17px;
+  }
+  .box-card .box-art,
+  .box-card .box-art img {
+    height: 125px;
+  }
+  .box-card > .primary {
+    font-size: 10px;
+  }
+}
+@media (max-height: 500px) {
+  .box-opening {
+    padding: 13px 16px;
+    min-height: 0;
+  }
+  .box-opening h2 {
+    font-size: 20px;
+    margin: 8px 0;
+  }
+  .reveal-chest {
+    height: 135px;
+  }
+  .loot-reveal-card {
+    height: 155px;
+    margin: 7px auto;
+  }
+  .loot-reveal-card > .themed-icon {
+    width: 65px;
+    height: 65px;
+  }
+  .loot-reveal-card > strong {
+    font-size: 30px;
+  }
+  .loot-reveal-card.brawler > img {
+    width: 88px;
+    height: 88px;
+  }
+  .loot-reveal-card.brawler > strong {
+    font-size: 18px;
+  }
+  .charge-dots {
+    margin: 0 0 5px;
+  }
+  .charge-dots i {
+    width: 13px;
+    height: 13px;
+  }
+  .box-opening > p {
+    margin: 5px;
+    font-size: 10px;
+  }
+  .rewards-left {
+    margin: 8px;
+    font-size: 9px;
+  }
+  .reveal-safe {
+    margin-top: 5px;
+  }
+  .box-opening .reveal-next {
+    min-height: 36px;
+    padding: 6px;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-chest > img,
+  .loot-reveal-card {
+    animation: none;
+  }
+}
+@media (max-width: 760px) {
+  .box-grid > .box-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .box-grid > .box-card > * {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .box-grid > .box-card > .eyebrow {
+    min-height: 15px;
+  }
+  .box-grid > .box-card > .box-art {
+    width: 100%;
+    margin: 8px 0;
+    height: 145px;
+    flex: none;
+  }
+  .box-grid > .box-card > .box-art > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .box-grid > .box-card > p {
+    margin: 8px 0 12px;
+    min-height: 37px;
+  }
+  .box-grid > .box-card > .primary {
+    margin-top: auto;
+    justify-content: center;
+  }
+  .box-grid > .box-card > .ad-button {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 350px) {
+  .box-grid > .box-card > .box-art {
+    height: 125px;
+  }
+}
+.box-actions {
+  display: grid;
+  grid-template-rows: minmax(43px, auto) minmax(40px, auto);
+  gap: 9px;
+  margin-top: auto;
+}
+.box-actions > .primary,
+.box-actions > .ad-button {
+  width: 100%;
+  margin: 0;
+  min-width: 0;
+}
+.box-actions > .box-special {
+  margin: 0;
+  padding: 5px 2px;
+  line-height: 1.35;
+  align-self: center;
+}
+@media (max-width: 760px) {
+  .box-grid > .box-card > .box-art {
+    height: 175px;
+    margin: 8px 0 11px;
+    overflow: visible;
+  }
+  .box-grid > .box-card > .box-art > img {
+    max-width: none;
+    width: calc(100% + 22px);
+    margin-left: -11px;
+    height: 100%;
+    object-fit: contain;
+  }
+  .box-grid > .box-card > h2 {
+    height: 46px;
+    min-height: 46px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-grid > .box-card > p {
+    min-height: 43px;
+    margin: 6px 0 12px;
+  }
+  .box-grid > .box-card > .box-actions {
+    display: grid;
+    grid-template-rows: 44px 40px;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+  }
+  .box-actions > .primary,
+  .box-actions > .ad-button {
+    margin: 0 !important;
+    padding: 6px 4px;
+    min-height: 0;
+    height: 100%;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .box-actions > .ad-button {
+    font-size: 8px;
+  }
+  .box-actions > .box-special {
+    font-size: 8px;
+    min-height: 0;
+    margin: 0;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 350px) {
+  .box-grid > .box-card > .box-art {
+    height: 150px;
+  }
+  .box-actions > .primary {
+    font-size: 9px;
+  }
+}
+.box-pool{display:block;margin-top:5px;font-size:9px;color:#c3dcff;line-height:1.3}
+@media(max-width:760px){.box-pool{font-size:8px;margin-top:4px}.box-grid>.box-card>p{min-height:61px}}
+@media(max-width:760px){
+ .pity-banner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px;padding:11px 12px;margin-bottom:15px}
+ .pity-banner>span{grid-column:1;grid-row:1;font-size:11px;white-space:normal}
+ .pity-banner>p{grid-column:1/-1;grid-row:2;font-size:8px;line-height:1.35;max-width:none;margin:0}
+ .pity-banner>.pity-pips{grid-column:2;grid-row:1;margin:0;gap:3px}
+ .pity-banner>.pity-pips>i{width:7px;height:14px}
+}

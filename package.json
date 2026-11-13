@@ -1,0 +1,21 @@
+{
+  "name": "brawl-click-trophy-rush",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5180 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4180 --strictPort",
+    "test": "node --import tsx --test tests/engine.test.ts",
+    "test:browser": "node --import tsx scripts/browser-check.mjs",
+    "release": "npm run build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package.ps1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "prettier": "3.6.2",
+    "tsx": "4.20.6",
+    "typescript": "5.7.3",
+    "vite": "6.4.4"
+  }
+}

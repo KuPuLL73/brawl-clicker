@@ -1,0 +1,463 @@
+/* Shared action row: the brawler skill is always next to Super. */
+.rush-panel .combat-controls,
+.boss-arena .combat-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 116px;
+  gap: 9px;
+  padding: 8px 10px 21px;
+  min-height: 94px;
+  align-items: stretch;
+}
+.boss-arena .arena-controls {
+  grid-template-columns: minmax(0, 1fr) 92px 86px;
+  gap: 7px;
+}
+.combat-controls .skill-button {
+  position: relative;
+  padding: 8px;
+  gap: 8px;
+  min-width: 0;
+  cursor: pointer;
+  border: 2px solid #d9adff;
+  border-bottom-width: 5px;
+  background: linear-gradient(150deg, #9d43e8, #6721ad);
+  box-shadow: 0 3px 0 #31115c;
+}
+.combat-controls .skill-button > img {
+  width: 32px;
+  height: 32px;
+  flex: none;
+}
+.combat-controls .skill-button > span {
+  gap: 3px;
+  overflow-wrap: anywhere;
+}
+.combat-controls .skill-button .skill-type {
+  font-style: normal;
+  font-size: 9px;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  color: #ffe89e;
+  line-height: 1.2;
+}
+.combat-controls .skill-button strong {
+  font-size: 12px;
+  line-height: 1.1;
+}
+.combat-controls .skill-button small {
+  font-size: 9px;
+  line-height: 1.2;
+  display: block;
+}
+.combat-controls .skill-button > b {
+  align-self: center;
+  background: #461878;
+  border: 1px solid #c68fee;
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 9px;
+  flex: none;
+}
+.combat-controls .skill-button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+.combat-controls .skill-button:enabled:hover {
+  filter: brightness(1.14);
+}
+.combat-controls .combat-super {
+  width: 100%;
+  height: auto;
+  min-height: 65px;
+  min-width: 0;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 11px;
+}
+.combat-controls .combat-super > .themed-icon {
+  width: 29px;
+  height: 29px;
+}
+.combat-controls .combat-super strong {
+  font-size: 13px;
+  line-height: 1.1;
+}
+.combat-controls .combat-super small {
+  display: block;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.combat-controls .dodge-button {
+  min-width: 0;
+  padding: 6px;
+  gap: 4px;
+}
+.combat-controls .dodge-button strong {
+  font-size: 10px;
+}
+.combat-controls .dodge-button small {
+  font-size: 9px;
+  line-height: 1.2;
+}
+.dodge-button.dodge-now {
+  opacity: 1;
+  border-color: #fff1a6;
+  background: linear-gradient(#ffbb35, #ed681c);
+  color: #2b180a;
+  box-shadow: 0 0 20px #ffbe4d99;
+  animation: dodgeReady 0.65s ease-in-out infinite alternate;
+}
+.combat-controls .dodge-now small {
+  font-weight: 1000;
+  font-size: 11px;
+}
+.rush-panel .training-bottom {
+  min-height: 49px;
+  height: auto;
+  padding: 6px 16px;
+  justify-content: flex-start;
+  gap: 28px;
+}
+.rush-panel .training-bottom .gain > b {
+  font-size: 21px;
+}
+/* A bomb has its own four-second fuse, independent of its motion. */
+.rush-target.bomb > .bomb-countdown {
+  width: auto;
+  height: auto;
+  min-width: 31px;
+  padding: 3px 5px;
+  top: -7px;
+  right: -8px;
+  font-size: 13px;
+  line-height: 1.1;
+  background: #d6244a;
+  border: 2px solid #ffe1b9;
+  border-radius: 8px;
+  rotate: 5deg;
+}
+.bomb-fuse {
+  position: absolute;
+  bottom: -5px;
+  left: 10%;
+  width: 80%;
+  height: 5px;
+  border-radius: 4px;
+  background: #ffe5a6;
+  border: 1px solid #a32d4e;
+  scale: var(--fuse) 1;
+  transform-origin: left;
+  pointer-events: none;
+}
+/* Make the timing cue readable without looking away from the fight. */
+.player-status .attack-cue {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 3px 8px;
+  border: 2px solid #74cfff;
+  border-radius: 9px;
+  background: #112956;
+  padding: 7px 10px;
+  color: #c9edff;
+  text-align: left;
+  min-height: 72px;
+}
+.attack-cue > strong {
+  font-size: 18px;
+  font-weight: 1000;
+  line-height: 1.1;
+}
+.attack-cue > b {
+  font-size: 34px;
+  font-weight: 1000;
+  line-height: 1;
+  color: white;
+  white-space: nowrap;
+}
+.attack-cue > small {
+  grid-column: 1/-1;
+  font-size: 10px;
+  line-height: 1.25;
+  color: #d8e9ff;
+}
+.attack-cue[data-state="warning"] {
+  background: #a83225;
+  border-color: #ffe489;
+  box-shadow: 0 0 19px #ff853166;
+}
+.attack-cue[data-state="warning"] > strong {
+  color: #fff0b1;
+}
+.attack-cue[data-state="dodged"],
+.attack-cue[data-state="dodging"],
+.attack-cue[data-state="blocked"] {
+  background: #166455;
+  border-color: #9bf7aa;
+}
+.attack-cue[data-state="hit"] {
+  background: #8b2850;
+  border-color: #ff99af;
+}
+.attack-cue[data-state="frozen"] {
+  background: #1c607f;
+  border-color: #99e9ff;
+}
+.boss-target .boss-attack-alert {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  bottom: auto;
+  padding: 7px 12px;
+  border: 3px solid #ffe191;
+  background: #bf3025;
+  color: white;
+  font-size: 20px;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  z-index: 4;
+  rotate: 7deg;
+}
+.warning .boss-target .boss-attack-alert {
+  display: block;
+}
+@keyframes dodgeReady {
+  to {
+    box-shadow: 0 0 30px #ffbe4dcc;
+
+  }
+}
+@media (min-width: 761px) and (min-height: 501px) {
+  .rush-panel .rush-scene.playing {
+    height: clamp(235px, calc(100dvh - 390px), 600px);
+  }
+  .fighting .player-status {
+    gap: 6px;
+    padding: 7px;
+  }
+  .boss-arena .combat-controls .skill-button > img {
+    display: none;
+  }
+  .boss-arena .combat-controls .skill-button small {
+    font-size: 10px;
+  }
+}
+@media (max-width: 760px) {
+  .rush-panel .combat-controls {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 7px;
+    padding: 7px 8px 20px;
+    min-height: 101px;
+  }
+  .boss-arena .combat-controls {
+    grid-template-columns: minmax(0, 1fr) 71px 72px;
+    gap: 6px;
+    padding: 7px 6px 20px;
+    min-height: 107px;
+  }
+  .combat-controls .skill-button {
+    padding: 6px;
+    gap: 5px;
+  }
+  .combat-controls .skill-button > img {
+    width: 26px;
+    height: 26px;
+  }
+  .boss-arena .combat-controls .skill-button > img {
+    display: none;
+  }
+  .combat-controls .skill-button strong {
+    font-size: 11px;
+  }
+  .combat-controls .skill-button .skill-type {
+    font-size: 8px;
+    letter-spacing: 0.6px;
+  }
+  .combat-controls .skill-button small {
+    font-size: 8px;
+  }
+  .combat-controls .skill-button > b {
+    font-size: 8px;
+    padding: 3px;
+    position: absolute;
+    right: 5px;
+    top: 4px;
+  }
+  .combat-controls .skill-button > span {
+    padding-top: 0;
+  }
+  .combat-controls .skill-button .skill-type {
+    padding-right: 34px;
+  }
+  .combat-controls .combat-super {
+    min-height: 67px;
+    padding: 5px;
+  }
+  .combat-controls .combat-super strong {
+    font-size: 11px;
+  }
+  .combat-controls .combat-super > .themed-icon {
+    width: 27px;
+    height: 27px;
+  }
+  .combat-controls .dodge-button {
+    padding: 4px;
+  }
+  .combat-controls .dodge-button strong {
+    font-size: 8px;
+  }
+  .combat-controls .dodge-button small {
+    font-size: 8px;
+  }
+  .combat-controls .dodge-now small {
+    font-size: 10px;
+  }
+  .rush-panel .training-bottom {
+    min-height: 48px;
+    padding: 6px 13px;
+    gap: 25px;
+  }
+  .rush-panel .training-bottom .gain > b {
+    font-size: 20px;
+  }
+  .player-status .attack-cue {
+    padding: 6px 7px;
+    min-height: 65px;
+    gap: 3px 5px;
+  }
+  .attack-cue > strong {
+    font-size: 15px;
+  }
+  .attack-cue > b {
+    font-size: 29px;
+  }
+  .attack-cue > small {
+    font-size: 9px;
+  }
+  .fighting .boss-target {
+    height: clamp(155px, calc(100dvh - 555px), 265px);
+    min-height: 0;
+  }
+  .boss-target .boss-attack-alert {
+    font-size: 15px;
+    padding: 5px 8px;
+    right: 6px;
+  }
+}
+@media (max-width: 350px) {
+  .combat-controls .skill-button > img {
+    display: none;
+  }
+  .combat-controls .skill-button strong {
+    font-size: 10px;
+  }
+  .combat-controls .skill-button small {
+    font-size: 8px;
+  }
+  .combat-controls .skill-button .skill-type {
+    font-size: 7px;
+    letter-spacing: 0.3px;
+  }
+  .boss-arena .combat-controls {
+    grid-template-columns: minmax(0, 1fr) 62px 65px;
+    gap: 5px;
+  }
+  .attack-cue > strong {
+    font-size: 13px;
+  }
+  .attack-cue > b {
+    font-size: 26px;
+  }
+}
+@media (max-height: 500px) and (min-width: 761px) {
+  .rush-panel .combat-controls {
+    grid-template-columns: minmax(0, 1fr) 87px;
+    min-height: 61px;
+    padding: 3px 6px 14px;
+    gap: 6px;
+  }
+  .combat-controls .skill-button {
+    padding: 4px 7px;
+  }
+  .combat-controls .skill-button > img {
+    width: 22px;
+    height: 22px;
+  }
+  .combat-controls .skill-button .skill-type {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+  .combat-controls .skill-button strong {
+    font-size: 10px;
+  }
+  .combat-controls .skill-button small {
+    display: none;
+  }
+  .combat-controls .combat-super {
+    min-height: 43px;
+    flex-direction: row;
+    padding: 4px;
+    gap: 4px;
+  }
+  .combat-controls .combat-super > .themed-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .combat-controls .combat-super strong {
+    font-size: 10px;
+  }
+  .combat-controls .combat-super small {
+    font-size: 8px;
+    margin-top: 2px;
+  }
+  .boss-arena .combat-controls {
+    grid-template-columns: minmax(0, 1fr) 65px 64px;
+    min-height: 60px;
+    padding: 3px 5px 13px;
+    gap: 5px;
+  }
+  .boss-arena .combat-controls .skill-button > img {
+    display: none;
+  }
+  .combat-controls .skill-button > b {
+    font-size: 8px;
+    padding: 3px;
+  }
+  .combat-controls .dodge-button {
+    padding: 4px;
+  }
+  .combat-controls .dodge-button img {
+    display: none;
+  }
+  .combat-controls .dodge-button strong,
+  .combat-controls .dodge-button small {
+    font-size: 8px;
+  }
+  .player-status .attack-cue {
+    padding: 3px 5px;
+    min-height: 44px;
+  }
+  .attack-cue > strong {
+    font-size: 11px;
+  }
+  .attack-cue > b {
+    font-size: 22px;
+  }
+  .attack-cue > small {
+    font-size: 8px;
+  }
+  .fighting .boss-target {
+    height: 180px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dodge-button.dodge-now {
+    animation: none;
+  }
+}

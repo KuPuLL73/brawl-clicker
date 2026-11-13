@@ -1,0 +1,2680 @@
+/* Robo Rush: a colorful game lobby, not a dashboard. */
+.themed-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  flex-shrink: 0;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 0 #0007);
+}
+.currency .themed-icon {
+  width: 19px;
+  height: 19px;
+}
+.wallet-item > .themed-icon {
+  width: 27px;
+  height: 27px;
+}
+.nav-item > .themed-icon {
+  width: 34px;
+  height: 34px;
+}
+.upgrade-icon > .themed-icon {
+  width: 38px;
+  height: 38px;
+}
+.super-button > .themed-icon {
+  width: 33px;
+  height: 33px;
+}
+.trophy-pill > .themed-icon,
+.count-badge > .themed-icon {
+  width: 25px;
+  height: 25px;
+}
+.gain .themed-icon {
+  width: 23px;
+  height: 23px;
+}
+.boost-icon .themed-icon {
+  width: 34px;
+  height: 34px;
+}
+.road-gift .themed-icon {
+  width: 47px;
+  height: 47px;
+}
+.road-number > .themed-icon {
+  width: 22px;
+  height: 22px;
+}
+.road-stop p > .themed-icon {
+  width: 17px;
+  height: 17px;
+}
+.ad-bonus-card > .themed-icon {
+  width: 48px;
+  height: 48px;
+}
+.wheel-decoration > .themed-icon {
+  width: 72px;
+  height: 72px;
+}
+.result-symbol .themed-icon {
+  width: 67px;
+  height: 67px;
+}
+.result-loot .themed-icon {
+  width: 32px;
+  height: 32px;
+}
+.pity-banner .themed-icon {
+  width: 25px;
+  height: 25px;
+}
+.rarity-mark .themed-icon {
+  width: 20px;
+  height: 20px;
+}
+.boss-symbol .themed-icon {
+  width: 43px;
+  height: 43px;
+}
+.team-strip > b > .themed-icon {
+  width: 24px;
+  height: 24px;
+}
+.prestige-star .themed-icon {
+  width: 50px;
+  height: 50px;
+}
+.prestige-card .primary > .themed-icon {
+  display: none;
+}
+.quest-icon .themed-icon {
+  width: 26px;
+  height: 26px;
+}
+#app {
+  background:
+    radial-gradient(circle at 75% 25%, #42b5ff55, transparent 45%),
+    repeating-conic-gradient(
+      from 30deg at 50% 50%,
+      #fff0 0 35deg,
+      #fff03 35deg 60deg
+    ),
+    linear-gradient(145deg, #1764b6, #243d9a 65%, #302c88);
+}
+.rail {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 100%;
+  height: 82px;
+  border: 0;
+  border-top: 3px solid #060e36;
+  background: linear-gradient(#154080, #0d275c);
+  padding: 7px 15px;
+  box-shadow: 0 -5px 0 #ffffff0b;
+  z-index: 5;
+}
+.rail .brand,
+.rail-settings {
+  display: none;
+}
+.rail nav {
+  flex-direction: row;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  gap: 9px;
+  margin: 0 auto;
+}
+.nav-item {
+  flex: 1;
+  min-height: 0;
+  gap: 4px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 900;
+  color: #d9edff;
+  background: linear-gradient(#2061a8, #1a4b8b);
+  border: 2px solid #081a43;
+  box-shadow: 0 4px 0 #050f30;
+}
+.nav-item.active {
+  background: linear-gradient(#ffe967, #ffbb2e);
+  color: #34260d;
+  text-shadow: none;
+  border-color: #39270f;
+  box-shadow: 0 4px 0 #39270f;
+}
+.nav-item.active::before {
+  display: none;
+}
+.nav-item i {
+  right: 15px;
+  top: 7px;
+  background: #ff426e;
+  box-shadow: 0 0 0 2px #112a54;
+}
+.game-shell {
+  padding-bottom: 82px;
+}
+.topbar {
+  height: 72px;
+  background: #071d5380;
+  border-bottom: 2px solid #6cc5ff22;
+  padding-inline: 30px;
+}
+.top-settings {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #17528f;
+  border: 2px solid #061a44;
+  color: #fff;
+}
+.topbar .wallet-item {
+  background: #0c285a;
+  border: 2px solid #07193d;
+  box-shadow: 0 3px 0 #051330;
+  min-width: 110px;
+  padding: 6px 10px;
+}
+.wallet-item b {
+  font-size: 16px;
+  text-shadow: 0 2px 0 #000;
+}
+.profile > img {
+  border: 2px solid #fff19a;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 3px 0 #080f36;
+}
+.profile strong {
+  font-size: 17px;
+  text-shadow: 0 2px 0 #102647;
+}
+.profile span {
+  color: #bfdbff;
+}
+.page-heading {
+  margin-bottom: 18px;
+}
+.page-heading .eyebrow {
+  color: #a5d8ff;
+  letter-spacing: 2px;
+  font-size: 8px;
+}
+h1 {
+  color: #fff;
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: 1000;
+  letter-spacing: -1.5px;
+  text-shadow:
+    0 3px 0 #10254c,
+    2px 0 0 #10254c,
+    -2px 0 0 #10254c;
+}
+.trophy-pill {
+  background: #102f67;
+  border: 2px solid #071a3f;
+  box-shadow: 0 4px 0 #06163a;
+  color: #ffe17a;
+}
+main {
+  padding: 20px 30px 18px;
+}
+footer {
+  display: none;
+}
+.home-grid {
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 20px;
+}
+.training {
+  border: 3px solid #071a45;
+  border-radius: 17px;
+  box-shadow:
+    0 7px 0 #08173a,
+    0 20px 35px #07193644;
+  background: #193a7f;
+}
+.training-top {
+  background: linear-gradient(#195696, #153f7b);
+  border-bottom: 2px solid #081f4a;
+  min-height: 43px;
+  padding: 10px 17px;
+  color: #e0f3ff;
+  font-size: 10px;
+  letter-spacing: 0.9px;
+}
+.training-top > div {
+  gap: 8px;
+}
+.training-top .themed-icon {
+  width: 25px;
+  height: 25px;
+}
+.training-top > .rush-time {
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 1000;
+  background: #0d2554;
+  border: 2px solid #08183f;
+  border-radius: 7px;
+}
+.training-bottom {
+  padding: 12px 18px;
+  min-height: 80px;
+  background: linear-gradient(#1b4a92, #163b7b);
+  border-top: 2px solid #092249;
+}
+.training-bottom .gain > span {
+  color: #bad9ff;
+  font-size: 10px;
+  font-weight: 700;
+}
+.training-bottom .gain > b {
+  font-size: 24px;
+  text-shadow: 0 2px 0 #061632;
+}
+.training-bottom .gain:nth-child(2) > b {
+  font-size: 24px;
+}
+.super-button {
+  background: linear-gradient(#214d85, #193962);
+  border: 2px solid #0a1c46;
+  box-shadow: 0 4px 0 #061332;
+  color: #ffed9c;
+  min-height: 51px;
+  min-width: 130px;
+}
+.super-button:enabled {
+  background: linear-gradient(#ffe05c, #ffc03b);
+  border-color: #512c17;
+  box-shadow: 0 4px 0 #512c17;
+  color: #42240b;
+}
+.super-button:disabled {
+  opacity: 0.75;
+}
+.super-fill {
+  background: #ffaa302f;
+}
+.combo-track {
+  height: 4px;
+  background: #0d2354;
+}
+.combo-track > span {
+  background: #ffd039;
+}
+.primary {
+  background: linear-gradient(#ffdf4b, #ffbd26);
+  border: 2px solid #58320c;
+  box-shadow:
+    0 4px 0 #4a250e,
+    inset 0 2px 0 #fff7ad;
+  color: #452305;
+  font-weight: 1000;
+  text-shadow: 0 1px 0 #fff3a5;
+  border-radius: 9px;
+}
+.secondary {
+  background: linear-gradient(#347ec8, #2562ad);
+  border: 2px solid #0b2b5e;
+  box-shadow: 0 3px 0 #071d48;
+  color: #fff;
+}
+.ad-button {
+  background: linear-gradient(#743ac0, #512b97);
+  border: 2px solid #271452;
+  color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 3px 0 #241346;
+  font-size: 11px;
+}
+.ad-button:disabled {
+  background: #234173;
+  border-color: #142b52;
+  color: #a1b9da;
+  opacity: 0.6;
+}
+.upgrade-panel {
+  background: #123b7b;
+  border: 3px solid #0c2456;
+  border-radius: 15px;
+  box-shadow: 0 6px 0 #0b1d4b;
+  padding: 14px;
+  gap: 9px;
+}
+.panel-title h2 {
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: -0.7px;
+  text-shadow: 0 2px 0 #11214c;
+}
+.panel-title > span {
+  display: none;
+}
+.upgrade-card {
+  background: linear-gradient(#276bb2, #1c579b);
+  border: 2px solid #12386b;
+  border-top-color: #4389c8;
+  border-radius: 10px;
+  min-height: 71px;
+  padding: 10px;
+  gap: 11px;
+  box-shadow: 0 3px 0 #0b2c5f;
+}
+.upgrade-icon {
+  background: transparent !important;
+  width: 38px;
+  height: 43px;
+}
+.upgrade-copy strong {
+  font-size: 11px;
+  color: #fff;
+  font-weight: 900;
+}
+.upgrade-copy small {
+  font-size: 8px;
+  color: #d1e5ff;
+}
+.upgrade-copy em {
+  font-size: 7px;
+  color: #9bc7ef;
+}
+.upgrade-price {
+  font-size: 13px;
+}
+.upgrade-price > small {
+  color: #a6f5a9;
+  font-size: 7px;
+}
+.boost-card {
+  background: linear-gradient(130deg, #6d36aa, #2b4184);
+  border: 2px solid #9d70d15c;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 8px;
+}
+.boost-card strong {
+  font-size: 12px;
+}
+.boost-card p {
+  color: #d4bef5;
+  font-size: 8px;
+}
+.boost-card .ad-button {
+  min-height: 32px;
+  font-size: 9px;
+}
+.below-home {
+  gap: 18px;
+  margin-top: 20px;
+}
+.mini-feature {
+  border: 2px solid #0b275d;
+  background: linear-gradient(120deg, #236bb1, #194b93);
+  box-shadow: 0 4px 0 #0b2455;
+  min-height: 95px;
+  border-radius: 12px;
+  padding: 12px 18px;
+}
+.mini-feature h3 {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 2px 0 #12315e;
+}
+.mini-feature span {
+  color: #aee1ff;
+  font-size: 8px;
+}
+.mini-feature p {
+  color: #bfdaff;
+  font-size: 10px;
+}
+.boss-invite {
+  background: linear-gradient(120deg, #6d3c8e, #443a8a);
+}
+.boss-invite span {
+  color: #f9beef;
+}
+.rush-scene {
+  position: relative;
+  height: clamp(260px, calc(100dvh - 390px), 500px);
+  overflow: hidden;
+  isolation: isolate;
+  background: #1b498b;
+  cursor: crosshair;
+}
+.rush-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    linear-gradient(#193d7540, #192c5d66),
+    url("../public/art/arena.png") center/cover;
+  transition: filter 0.4s;
+}
+.rush-colorwash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  mix-blend-mode: screen;
+  background: linear-gradient(135deg, #22b9ff22, #775cff11);
+  transition: background 0.4s;
+}
+.rush-scene[data-phase="1"] .rush-backdrop {
+  filter: hue-rotate(35deg) saturate(1.25);
+}
+.rush-scene[data-phase="2"] .rush-backdrop {
+  filter: hue-rotate(90deg) saturate(1.4);
+}
+.rush-scene[data-phase="3"] .rush-backdrop {
+  filter: hue-rotate(160deg) saturate(1.35);
+}
+.rush-scene[data-phase="4"] .rush-backdrop {
+  filter: hue-rotate(245deg) saturate(1.4);
+}
+.rush-scene.fever .rush-colorwash {
+  background: radial-gradient(ellipse at 50% 50%, #fa60d93b, transparent 80%);
+}
+.rush-scene.supernova::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse, #fff7b8b0, transparent 75%);
+  animation: superFade 0.5s ease-out forwards;
+  z-index: 9;
+}
+.rush-ready-hero {
+  position: absolute;
+  left: -4%;
+  bottom: -13%;
+  height: 125%;
+  width: 56%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 5px #14215188);
+  pointer-events: none;
+}
+.rush-ready-portrait {
+  position: absolute;
+  left: 8%;
+  bottom: 15%;
+  width: 33%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 5px solid #ffdf5b;
+  border-radius: 25%;
+  transform: rotate(-7deg);
+  box-shadow: 0 9px 0 #18265f;
+  pointer-events: none;
+}
+.rush-ready-bot {
+  position: absolute;
+  width: 100px;
+  height: 110px;
+  object-fit: contain;
+  right: 4%;
+  bottom: 6%;
+  filter: drop-shadow(0 12px 6px #061b4166);
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+.rush-intro {
+  position: absolute;
+  left: 46%;
+  top: 11%;
+  width: 50%;
+  z-index: 2;
+}
+.ready-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #3c236a;
+  border: 2px solid #8a56cc;
+  transform: rotate(-3deg);
+  color: #f6ccff;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-weight: 900;
+  font-size: 10px;
+}
+.ready-badge > .themed-icon {
+  width: 22px;
+  height: 22px;
+}
+.rush-intro h2 {
+  font-size: clamp(35px, 4vw, 63px);
+  font-weight: 1000;
+  color: #ffe056;
+  text-shadow:
+    0 4px 0 #1f1c54,
+    3px 0 0 #1f1c54,
+    -3px 0 0 #1f1c54;
+  line-height: 0.96;
+  letter-spacing: -2px;
+  transform: rotate(-3deg);
+  margin-top: 15px;
+}
+.rush-intro p {
+  font-size: 13px;
+  color: #e1ecff;
+  text-shadow: 0 1px 2px #172653;
+  line-height: 1.65;
+  margin: 17px 0 16px;
+  font-weight: 700;
+}
+.rush-start {
+  font-size: 22px;
+  min-height: 56px;
+  padding: 12px 25px;
+  transform: rotate(-2deg);
+  min-width: 205px;
+}
+.rush-start > .themed-icon {
+  width: 31px;
+  height: 31px;
+}
+.rush-intro small {
+  display: block;
+  font-size: 9px;
+  color: #bbd7f8;
+  margin-top: 12px;
+}
+.rush-targets {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+.rush-target {
+  position: absolute;
+  translate: -50% -50%;
+  width: 92px;
+  height: 102px;
+  background: none;
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  isolation: isolate;
+  animation: targetPop 0.17s ease-out;
+  touch-action: manipulation;
+}
+.rush-target::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -4%;
+  height: 21%;
+  border-radius: 50%;
+  background: #09266366;
+  filter: blur(3px);
+  z-index: -1;
+}
+.rush-target > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 1px #10163e88);
+}
+.rush-target[data-slot="1"] > img,
+.rush-target[data-slot="6"] > img {
+  filter: hue-rotate(24deg) drop-shadow(0 4px 1px #10163e88);
+}
+.rush-target[data-slot="2"] > img,
+.rush-target[data-slot="7"] > img {
+  filter: hue-rotate(-27deg) drop-shadow(0 4px 1px #10163e88);
+}
+.rush-target.gem {
+  width: 62px;
+  height: 68px;
+  rotate: -12deg;
+}
+.rush-target.gem > img {
+  filter: drop-shadow(0 0 20px #4bffba90);
+}
+.rush-target > b {
+  position: absolute;
+  right: -7px;
+  top: -3px;
+  font-size: 15px;
+  color: #fff89e;
+  text-shadow: 0 2px 0 #243d35;
+}
+.target-life {
+  position: absolute;
+  bottom: -5px;
+  left: 14%;
+  width: 72%;
+  height: 4px;
+  background: #b8e6ff;
+  border: 1px solid #173259;
+  border-radius: 3px;
+  scale: var(--life) 1;
+  transform-origin: center;
+}
+.gem .target-life {
+  background: #84ff99;
+}
+.rush-combo {
+  position: absolute;
+  top: 13px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: none;
+  z-index: 4;
+  transform: rotate(-8deg);
+  min-width: 58px;
+}
+.rush-combo > strong {
+  font-size: 46px;
+  font-weight: 1000;
+  line-height: 1;
+  color: #fff;
+  text-shadow:
+    0 3px 0 #142860,
+    2px 0 0 #142860,
+    -2px 0 0 #142860;
+}
+.rush-combo > span {
+  font-size: 10px;
+  color: #7ddcff;
+  letter-spacing: 1.3px;
+  font-weight: 900;
+  text-shadow: 0 2px 0 #172b61;
+}
+.rush-combo > b {
+  font-size: 18px;
+  color: #ffdd58;
+  text-shadow: 0 2px 0 #182355;
+  margin-top: 5px;
+}
+.rush-callout {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 4;
+  font-size: 14px;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 3px 0 #21285e;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.fever .rush-callout {
+  color: #fff29a;
+  font-size: 18px;
+}
+.rush-corner-hero {
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: 2px solid #ffdf57;
+  border-radius: 13px;
+  rotate: -8deg;
+  z-index: 4;
+  pointer-events: none;
+}
+.rush-result-stats {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 20px 0;
+}
+.rush-result-stats span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: #c1d8fa;
+}
+.rush-result-stats b {
+  font-size: 35px;
+  color: #ffdc53;
+  font-weight: 1000;
+}
+.box-card,
+.fighter-card,
+.road-stop,
+.daily-card,
+.wheel-card,
+.ad-bonus-card,
+.quest {
+  border-width: 2px;
+  border-color: #0e2c5c;
+  box-shadow: 0 4px 0 #0a2455;
+}
+.box-card {
+  background:
+    radial-gradient(ellipse at 50% 35%, #4c8de080, transparent 65%), #18478b;
+}
+.box-1 {
+  background:
+    radial-gradient(ellipse at 50% 35%, #9a69eb80, transparent 65%), #3b3c8d;
+}
+.box-2 {
+  background:
+    radial-gradient(ellipse at 50% 35%, #e5b86880, transparent 65%), #71446b;
+}
+.box-card > .eyebrow {
+  color: #bbdcff;
+}
+.box-card h2 {
+  font-size: 27px;
+  color: #fff;
+  text-shadow: 0 3px 0 #1c285b;
+}
+.pity-banner {
+  background: linear-gradient(120deg, #603eac, #263f8a);
+  border: 2px solid #29276b;
+}
+.pity-banner p {
+  color: #d3dafa;
+}
+.filters button {
+  background: #16478a;
+  color: #d5eaff;
+  border: 2px solid #102c5c;
+}
+.filters button.selected {
+  background: #ffcf48;
+  color: #472d07;
+  border-color: #67441c;
+}
+.team-strip,
+.offline-card {
+  background: #174b8d;
+  border: 2px solid #0b285a;
+}
+.fighter-card {
+  background: #174c90;
+}
+.fighter-card p {
+  color: #c1d9f9;
+}
+.fighter-card h3 {
+  color: #fff;
+  text-shadow: 0 2px 0 #172a53;
+}
+.fighter-card.locked {
+  background: #2b4480;
+}
+.daily-card {
+  background:
+    radial-gradient(ellipse at 10% 100%, #e0b2384d, transparent 75%), #2557a0;
+}
+.wheel-card {
+  background:
+    radial-gradient(ellipse at 80% 60%, #a65ddb7d, transparent 75%), #41408d;
+}
+.daily-card .eyebrow,
+.wheel-card .eyebrow {
+  color: #b4d7ff;
+}
+.daily-card .claim-actions .ad-button {
+  min-height: 44px;
+}
+.wheel-card .ad-button {
+  max-width: 220px;
+  position: relative;
+  z-index: 1;
+}
+.ad-bonus-card {
+  background: #23539b;
+}
+.quest {
+  background: #1c4b8c;
+}
+.quest progress::-webkit-progress-value {
+  background: #75ebff;
+}
+.quest-claim .secondary {
+  border-width: 1px;
+}
+.road-stop {
+  background: #194985;
+}
+.road-stop.ready {
+  background: linear-gradient(#5d589b, #244a8e);
+}
+.road-stop p {
+  color: #cadfff;
+}
+.prestige-card {
+  background: linear-gradient(120deg, #7b4676, #2b438c);
+  border: 2px solid #3c286c;
+}
+.sdk-note {
+  background: #174682;
+  border: 1px solid #6c9ee955;
+  color: #c4ddff;
+}
+.section-heading span,
+.arena-info {
+  color: #bed8ff;
+}
+.section-heading h2 {
+  color: #fff;
+  text-shadow: 0 2px 0 #152d5e;
+}
+dialog {
+  background:
+    radial-gradient(ellipse at 50% 0, #6578c788, transparent 70%), #214d91;
+  border: 3px solid #092455;
+  box-shadow:
+    0 9px 0 #071a42,
+    0 25px 100px #0009;
+}
+.settings-note {
+  color: #c4d9f5;
+}
+.result-content > p {
+  color: #d3e3fa;
+}
+.floating-gain {
+  font-size: 32px;
+}
+.upgrade-full {
+  background: #2a6daf;
+  border: 2px solid #154b7d;
+  color: #e1fcff;
+}
+.boss-arena {
+  background:
+    radial-gradient(ellipse at 50% 50%, #bc5b9f66, transparent 65%),
+    linear-gradient(150deg, #514aa6, #244c94);
+  border: 3px solid #172c65;
+}
+.fighter-trait {
+  font-size: 11px !important;
+  color: #f4d877 !important;
+  line-height: 1.6;
+  margin-top: 12px !important;
+}
+.paused .rush-target,
+.paused .rush-ready-bot {
+  animation-play-state: paused;
+}
+@keyframes targetPop {
+  from {
+    scale: 0.5;
+    opacity: 0.5;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes superFade {
+  to {
+    opacity: 0;
+    scale: 1.2;
+  }
+}
+@media (min-width: 1500px) {
+  .home-grid {
+    grid-template-columns: minmax(0, 1fr) 330px;
+  }
+  .upgrade-card {
+    min-height: 80px;
+  }
+  .upgrade-copy strong {
+    font-size: 13px;
+  }
+  .upgrade-copy small {
+    font-size: 9px;
+  }
+  .rush-scene {
+    height: clamp(330px, calc(100dvh - 390px), 540px);
+  }
+}
+@media (max-width: 1000px) {
+  .home-grid {
+    grid-template-columns: minmax(0, 1fr) 255px;
+    gap: 14px;
+  }
+  .upgrade-panel {
+    padding: 12px;
+    gap: 8px;
+    display: flex;
+  }
+  .panel-title {
+    display: block;
+  }
+  .upgrade-card {
+    padding: 9px 7px;
+    gap: 7px;
+    min-height: 70px;
+  }
+  .upgrade-copy strong {
+    font-size: 10px;
+  }
+  .upgrade-copy small {
+    font-size: 7px;
+  }
+  .upgrade-price {
+    font-size: 11px;
+  }
+  .upgrade-icon,
+  .upgrade-icon > .themed-icon {
+    width: 32px;
+  }
+  .boost-card {
+    flex-wrap: wrap;
+  }
+  .boost-card .ad-button {
+    width: 100%;
+    margin: 0;
+  }
+  .rush-intro h2 {
+    font-size: 42px;
+  }
+  .rush-intro p {
+    font-size: 11px;
+  }
+  .rush-start {
+    font-size: 18px;
+    min-width: 170px;
+    padding: 12px 15px;
+  }
+  .topbar {
+    padding-inline: 20px;
+  }
+  main {
+    padding-inline: 20px;
+  }
+  .rush-target {
+    width: 83px;
+    height: 94px;
+  }
+  .nav-item {
+    font-size: 9px;
+  }
+  .nav-item > .themed-icon {
+    width: 31px;
+    height: 31px;
+  }
+  .below-home .mini-feature h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 760px) {
+  .game-shell {
+    padding-bottom: 68px;
+  }
+  .rail {
+    height: 68px;
+    padding: 5px 4px 6px;
+    border-top-width: 2px;
+  }
+  .rail nav {
+    gap: 4px;
+  }
+  .nav-item {
+    gap: 2px;
+    font-size: 8px;
+    border-radius: 8px;
+    border-width: 1px;
+  }
+  .nav-item > .themed-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .topbar {
+    height: 62px;
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .profile > img {
+    width: 37px;
+    height: 37px;
+    border-radius: 9px;
+  }
+  .profile strong {
+    font-size: 12px;
+  }
+  .profile span {
+    font-size: 8px;
+  }
+  .wallet {
+    gap: 5px;
+  }
+  .topbar .wallet-item {
+    padding: 4px 6px;
+    gap: 5px;
+    min-width: 0;
+    border-radius: 7px;
+  }
+  .wallet-item b {
+    font-size: 12px;
+  }
+  .wallet-item > .themed-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .wallet-item button {
+    display: none;
+  }
+  .wallet-item.pink {
+    display: flex;
+  }
+  .profile i,
+  .profile span {
+    display: none;
+  }
+  .top-settings {
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+  }
+  .top-settings svg {
+    width: 17px;
+  }
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .page-heading {
+    margin-bottom: 14px;
+  }
+  .page-heading .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .page-heading .trophy-pill {
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    gap: 5px;
+  }
+  .trophy-pill > .themed-icon {
+    width: 22px;
+    height: 22px;
+  }
+  main {
+    padding: 15px 12px;
+  }
+  .training-top {
+    padding: 8px 12px;
+    min-height: 37px;
+    font-size: 8px;
+  }
+  .training-top .themed-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .training-top > .rush-time {
+    font-size: 13px;
+    padding: 4px 7px;
+    border-width: 1px;
+  }
+  .rush-scene {
+    height: clamp(270px, calc(100dvh - 330px), 370px);
+  }
+  .rush-intro {
+    left: 46%;
+    top: 15%;
+    width: 51%;
+  }
+  .rush-intro h2 {
+    font-size: clamp(33px, 8.5vw, 47px);
+    letter-spacing: -1.4px;
+    margin-top: 12px;
+    text-shadow:
+      0 3px 0 #211a4d,
+      2px 0 0 #211a4d,
+      -2px 0 0 #211a4d;
+  }
+  .ready-badge {
+    padding: 4px 7px;
+    font-size: 7px;
+    gap: 4px;
+  }
+  .ready-badge > .themed-icon {
+    width: 17px;
+    height: 17px;
+  }
+  .rush-ready-hero {
+    left: -15%;
+    bottom: -8%;
+    height: 118%;
+    width: 76%;
+  }
+  .rush-ready-bot {
+    width: 63px;
+    height: 74px;
+    right: 1%;
+    bottom: 1%;
+    rotate: 10deg;
+  }
+  .rush-intro p {
+    font-size: 10px;
+    line-height: 1.6;
+    margin: 15px 0;
+  }
+  .rush-start {
+    min-width: 0;
+    width: 95%;
+    font-size: 18px;
+    padding: 11px 9px;
+    min-height: 47px;
+    gap: 6px;
+  }
+  .rush-start > .themed-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .rush-intro small {
+    font-size: 7px;
+    margin-top: 10px;
+  }
+  .training-bottom {
+    padding: 11px 12px;
+    min-height: 73px;
+    gap: 13px;
+  }
+  .training-bottom .gain > span {
+    font-size: 8px;
+  }
+  .training-bottom .gain > b,
+  .training-bottom .gain:nth-child(2) > b {
+    font-size: 22px;
+  }
+  .training-bottom .gain:nth-child(2) {
+    display: block;
+  }
+  .gain .themed-icon {
+    width: 21px;
+    height: 21px;
+  }
+  .super-button {
+    min-width: 112px;
+    min-height: 46px;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+  .super-button > .themed-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .super-button strong {
+    font-size: 12px;
+  }
+  .super-button small {
+    font-size: 9px;
+  }
+  .rush-target {
+    width: 75px;
+    height: 84px;
+  }
+  .rush-target.gem {
+    width: 51px;
+    height: 56px;
+  }
+  .rush-combo {
+    left: 11px;
+    top: 12px;
+    min-width: 43px;
+  }
+  .rush-combo > strong {
+    font-size: 35px;
+  }
+  .rush-combo > span {
+    font-size: 7px;
+  }
+  .rush-combo > b {
+    font-size: 14px;
+  }
+  .rush-corner-hero {
+    width: 38px;
+    height: 38px;
+    left: 11px;
+    bottom: 12px;
+    border-radius: 10px;
+  }
+  .rush-callout {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    bottom: 18px;
+    left: 56%;
+  }
+  .fever .rush-callout {
+    font-size: 12px;
+  }
+  .upgrade-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 13px;
+    gap: 10px;
+  }
+  .panel-title {
+    grid-column: 1/-1;
+  }
+  .panel-title h2 {
+    font-size: 19px;
+  }
+  .upgrade-card {
+    min-height: 99px;
+    flex-wrap: wrap;
+    padding: 11px;
+    gap: 8px;
+  }
+  .upgrade-icon {
+    width: 30px;
+    height: 33px;
+  }
+  .upgrade-icon > .themed-icon {
+    width: 33px;
+    height: 33px;
+  }
+  .upgrade-copy strong {
+    font-size: 10px;
+  }
+  .upgrade-copy small {
+    font-size: 7px;
+  }
+  .upgrade-price {
+    border-top: 1px solid #ffffff1b;
+    padding-top: 7px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+  .upgrade-price > small {
+    margin: 0;
+    font-size: 7px;
+  }
+  .boost-card {
+    grid-column: 1/-1;
+    flex-wrap: nowrap;
+    gap: 9px;
+    padding: 11px;
+  }
+  .boost-card strong {
+    font-size: 11px;
+  }
+  .boost-card p {
+    font-size: 8px;
+  }
+  .boost-icon .themed-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .boost-card .ad-button {
+    width: auto;
+    min-width: 85px;
+    margin-left: auto;
+    font-size: 9px;
+  }
+  .below-home {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .mini-feature {
+    min-height: 88px;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .mini-feature h3 {
+    font-size: 16px;
+  }
+  .mini-feature p {
+    font-size: 9px;
+  }
+  .mini-feature span {
+    font-size: 7px;
+  }
+  .mini-feature > img {
+    width: 65px;
+  }
+  .mini-feature .boss-symbol {
+    width: 53px;
+    height: 53px;
+  }
+  .box-card h2 {
+    font-size: 24px;
+  }
+  .box-card > .primary {
+    font-size: 12px;
+  }
+  .box-card > .ad-button {
+    font-size: 11px;
+  }
+  .currency .themed-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .ad-bonus-card > .themed-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .road-gift .themed-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .road-stop p > .themed-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .road-number > .themed-icon {
+    width: 19px;
+    height: 19px;
+  }
+  .team-strip > b > .themed-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .quest-icon .themed-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .quest-claim .currency .themed-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .topbar .wallet-item.pink {
+    display: flex;
+  }
+  .result-loot .themed-icon {
+    width: 27px;
+    height: 27px;
+  }
+  .nav-item i {
+    width: 5px;
+    height: 5px;
+    right: 10%;
+    top: 4px;
+  }
+  .ready .rush-backdrop {
+    background-position: 60% center;
+  }
+  .rush-ready-portrait {
+    left: 3%;
+    bottom: 25%;
+    width: 38%;
+    border-width: 3px;
+  }
+  .settings-note {
+    font-size: 9px;
+  }
+}
+@media (max-width: 370px) {
+  .profile strong {
+    font-size: 10px;
+  }
+  .profile > img {
+    width: 31px;
+    height: 31px;
+  }
+  .topbar .wallet-item {
+    padding: 4px;
+    gap: 3px;
+  }
+  .wallet-item b {
+    font-size: 10px;
+  }
+  .wallet-item > .themed-icon {
+    width: 19px;
+    height: 19px;
+  }
+  .wallet {
+    gap: 3px;
+  }
+  .top-settings {
+    width: 26px;
+  }
+  .topbar {
+    gap: 5px;
+  }
+  .rush-scene {
+    height: 300px;
+  }
+  .rush-intro h2 {
+    font-size: 31px;
+  }
+  .rush-intro p {
+    font-size: 8px;
+  }
+  .rush-start {
+    font-size: 16px;
+  }
+  .rush-target {
+    width: 64px;
+    height: 74px;
+  }
+  .rush-target.gem {
+    width: 44px;
+    height: 49px;
+  }
+  .training-bottom .gain > b,
+  .training-bottom .gain:nth-child(2) > b {
+    font-size: 18px;
+  }
+  .training-bottom .gain > span {
+    font-size: 7px;
+  }
+  .super-button {
+    min-width: 99px;
+    gap: 5px;
+  }
+  .super-button > .themed-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .upgrade-card {
+    padding: 9px 7px;
+    gap: 6px;
+  }
+  .upgrade-copy strong {
+    font-size: 9px;
+  }
+  .upgrade-copy small {
+    font-size: 6.5px;
+  }
+  .upgrade-icon > .themed-icon {
+    width: 29px;
+    height: 29px;
+  }
+  .boost-card strong {
+    font-size: 10px;
+  }
+  .boost-card p {
+    font-size: 7px;
+  }
+  .rush-callout {
+    font-size: 9px;
+  }
+  .fever .rush-callout {
+    font-size: 11px;
+  }
+}
+@media (max-height: 500px) and (min-width: 641px) {
+  .topbar {
+    height: 44px;
+  }
+  .profile > img {
+    width: 31px;
+    height: 31px;
+  }
+  .profile strong {
+    font-size: 12px;
+  }
+  .profile span {
+    display: none;
+  }
+  .topbar .wallet-item {
+    padding: 3px 8px;
+    min-width: 90px;
+  }
+  .wallet-item > .themed-icon {
+    width: 21px;
+    height: 21px;
+  }
+  .wallet-item b {
+    font-size: 12px;
+  }
+  .rail {
+    height: 51px;
+    padding: 3px 10px 4px;
+  }
+  .game-shell {
+    padding-bottom: 51px;
+  }
+  .nav-item > .themed-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .nav-item {
+    font-size: 7px;
+    gap: 1px;
+  }
+  .home-grid {
+    grid-template-columns: minmax(0, 1fr) 235px;
+    gap: 10px;
+  }
+  .page-heading {
+    display: none;
+  }
+  main {
+    padding: 9px 14px;
+  }
+  .rush-scene {
+    height: calc(100dvh - 166px);
+    min-height: 145px;
+  }
+  .training-top {
+    min-height: 27px;
+    padding: 4px 10px;
+    font-size: 7px;
+  }
+  .training-top .themed-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .training-top > .rush-time {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  .training-bottom {
+    min-height: 44px;
+    padding: 6px 11px;
+    gap: 15px;
+  }
+  .training-bottom .gain > span {
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
+  .training-bottom .gain > b,
+  .training-bottom .gain:nth-child(2) > b {
+    font-size: 15px;
+  }
+  .gain .themed-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .super-button {
+    min-height: 33px;
+    min-width: 95px;
+    padding: 4px 9px;
+    gap: 5px;
+  }
+  .super-button > .themed-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .super-button strong {
+    font-size: 9px;
+  }
+  .super-button small {
+    font-size: 7px;
+  }
+  .rush-intro {
+    top: 8%;
+  }
+  .rush-intro h2 {
+    font-size: 33px;
+    line-height: 0.93;
+    margin-top: 7px;
+  }
+  .rush-intro p {
+    font-size: 8px;
+    line-height: 1.5;
+    margin: 7px 0;
+  }
+  .ready-badge {
+    font-size: 6px;
+    padding: 3px 7px;
+  }
+  .ready-badge .themed-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .rush-start {
+    min-height: 34px;
+    font-size: 15px;
+    min-width: 140px;
+    padding: 6px 12px;
+  }
+  .rush-start > .themed-icon {
+    width: 21px;
+    height: 21px;
+  }
+  .rush-intro small {
+    font-size: 6px;
+    margin-top: 6px;
+  }
+  .rush-ready-bot {
+    width: 62px;
+    height: 68px;
+    right: 5%;
+    bottom: 1%;
+  }
+  .rush-target {
+    width: 55px;
+    height: 61px;
+  }
+  .rush-target.gem {
+    width: 39px;
+    height: 43px;
+  }
+  .rush-combo {
+    top: 6px;
+    left: 10px;
+    min-width: 35px;
+  }
+  .rush-combo > strong {
+    font-size: 27px;
+  }
+  .rush-combo > span {
+    font-size: 6px;
+  }
+  .rush-combo > b {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+  .rush-callout {
+    font-size: 8px;
+    bottom: 7px;
+    left: 55%;
+  }
+  .fever .rush-callout {
+    font-size: 10px;
+  }
+  .rush-corner-hero {
+    width: 28px;
+    height: 28px;
+    bottom: 7px;
+    left: 10px;
+    border-radius: 7px;
+  }
+  .upgrade-panel {
+    padding: 9px;
+    gap: 5px;
+    display: flex;
+  }
+  .panel-title h2 {
+    font-size: 13px;
+  }
+  .upgrade-card {
+    padding: 6px;
+    min-height: 43px;
+    gap: 7px;
+    flex-wrap: nowrap;
+  }
+  .upgrade-icon,
+  .upgrade-icon > .themed-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .upgrade-copy strong {
+    font-size: 8px;
+  }
+  .upgrade-copy small {
+    font-size: 6px;
+    margin-top: 3px;
+  }
+  .upgrade-copy em {
+    display: none;
+  }
+  .upgrade-price {
+    width: auto;
+    display: block;
+    border: 0;
+    padding: 0;
+    font-size: 10px;
+  }
+  .upgrade-price > small {
+    display: none;
+  }
+  .boost-card {
+    padding: 6px;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+  .boost-icon .themed-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .boost-card strong {
+    font-size: 8px;
+  }
+  .boost-card p {
+    font-size: 6px;
+  }
+  .boost-card .ad-button {
+    width: auto;
+    min-width: 57px;
+    padding: 6px;
+    font-size: 7px;
+    min-height: 25px;
+  }
+  .below-home {
+    margin-top: 14px;
+  }
+  .mini-feature {
+    min-height: 70px;
+  }
+}
+@media (min-width: 761px) {
+  .training-top {
+    height: 43px;
+    padding-block: 5px;
+  }
+  .training-top > .rush-time {
+    padding: 3px 9px;
+    font-size: 15px;
+  }
+  .upgrade-card {
+    min-height: 64px;
+    padding: 7px 9px;
+  }
+  .boost-card {
+    padding: 9px;
+  }
+  .rush-intro {
+    top: 10%;
+  }
+  .rush-ready-hero {
+    bottom: -18%;
+    height: 122%;
+  }
+}
+/* Persistent, simulation-driven motion: no CSS respawn timer. */
+.rush-target {
+  transition:
+    left 0.11s linear,
+    top 0.11s linear;
+}
+.rush-target.coin,
+.rush-target.power,
+.rush-target.bomb {
+  width: 74px;
+  height: 80px;
+}
+.rush-target.rival {
+  width: 83px;
+  height: 88px;
+}
+.rush-target.rival > img {
+  border-radius: 22px;
+  border: 3px solid #ffbd58;
+  background: #6d288e;
+}
+.rush-target.bomb > img {
+  filter: drop-shadow(0 0 10px #ff537c88);
+}
+.rush-target.power > img {
+  filter: drop-shadow(0 0 12px #86ff5d88);
+}
+.rush-target.coin > img {
+  filter: drop-shadow(0 0 12px #ffc95099);
+}
+.rush-target.bomb > b {
+  color: #fff;
+  background: #ed335b;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+}
+.target-hp {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  color: #ffeb83;
+  letter-spacing: 6px;
+  font-size: 18px;
+  text-shadow: 0 2px 2px #000;
+}
+.boss-arena {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    color-mix(in srgb, var(--boss-color) 45%, #432286),
+    #153d93 75%
+  );
+  border: 2px solid var(--boss-color);
+}
+.boss-arena-top h2 {
+  font-size: clamp(17px, 2.3vw, 26px);
+  margin: 4px 0;
+  color: white;
+  letter-spacing: 0;
+}
+.boss-mechanic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0 0;
+  color: #fff2ca;
+  min-height: 28px;
+}
+.boss-mechanic img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+.boss-target {
+  height: 270px;
+  isolation: isolate;
+}
+.boss-portrait {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border: 5px solid var(--boss-color);
+  border-radius: 36px;
+  background: #111c5b;
+  box-shadow:
+    0 10px 0 #111c5b88,
+    0 0 35px var(--boss-color);
+  rotate: -5deg;
+  z-index: 1;
+  pointer-events: none;
+}
+.fighting .boss-portrait {
+  animation: bossHover 2.2s ease-in-out infinite alternate;
+}
+.boss-haste.fighting .boss-portrait {
+  animation-duration: 1s;
+}
+.boss-aura {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 3px dashed var(--boss-color);
+  border-radius: 50%;
+  opacity: 0.6;
+  rotate: 20deg;
+}
+.boss-target > span {
+  z-index: 2;
+  font-size: 9px;
+}
+.boss-queue {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 16px 3px 12px;
+  scrollbar-width: thin;
+}
+.boss-stage {
+  flex: 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+  padding: 10px 4px 7px;
+  border: 2px solid #6386d8;
+  border-radius: 12px;
+  background: #153c8e;
+}
+.boss-stage img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.boss-stage b {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.boss-stage > span {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-weight: 1000;
+  color: #ffdd64;
+}
+.boss-stage.current {
+  border-color: #ffdf5b;
+  background: #5e3b9d;
+  box-shadow: 0 0 12px #ffdf5b55;
+}
+.boss-stage.defeated {
+  border-color: #7aef99;
+  background: #155b67;
+}
+.boss-stage.locked {
+  opacity: 0.6;
+}
+@keyframes bossHover {
+  from {
+    transform: translate(-15px, 0) rotate(-3deg);
+  }
+  to {
+    transform: translate(15px, -10px) rotate(3deg);
+  }
+}
+@media (max-width: 760px) {
+  .boss-target {
+    height: 230px;
+  }
+  .boss-portrait {
+    width: 165px;
+    height: 165px;
+  }
+  .boss-aura {
+    width: 195px;
+    height: 195px;
+  }
+  .boss-mechanic {
+    font-size: 10px;
+  }
+  .boss-stage {
+    flex-basis: 68px;
+  }
+  .rush-target.coin,
+  .rush-target.power,
+  .rush-target.bomb {
+    width: 62px;
+    height: 68px;
+  }
+  .rush-target.rival {
+    width: 67px;
+    height: 72px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fighting .boss-portrait {
+    animation: none;
+  }
+  .rush-target {
+    transition: none;
+  }
+}
+.combat-controls {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  padding: 8px 12px 20px;
+  background: #102b65;
+  min-height: 75px;
+}
+.skill-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+  min-width: 0;
+  background: linear-gradient(#8e40cf, #652aa2);
+  border: 2px solid #cd93f2;
+  border-bottom-width: 5px;
+  border-radius: 11px;
+  padding: 7px 10px;
+  text-align: left;
+  color: white;
+}
+.skill-button > img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 9px;
+}
+.skill-button > span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+.skill-button strong {
+  font-size: 12px;
+}
+.skill-button small {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: normal;
+}
+.skill-button > b {
+  font-size: 11px;
+  color: #fff29c;
+}
+.skill-button:disabled,
+.dodge-button:disabled {
+  opacity: 0.55;
+  filter: none;
+}
+.skill-effect {
+  position: absolute;
+  bottom: 3px;
+  font-size: 9px;
+  left: 18px;
+  color: #dcadff;
+  font-weight: 800;
+}
+.arena-controls {
+  background: #10255688;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.dodge-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 2px solid #73ecff;
+  border-bottom-width: 5px;
+  border-radius: 11px;
+  background: #1675ba;
+  padding: 7px 14px;
+  color: white;
+}
+.dodge-button img {
+  width: 25px;
+  height: 25px;
+}
+.dodge-button strong {
+  font-size: 10px;
+}
+.dodge-button small {
+  font-size: 9px;
+}
+.boss-sprite {
+  height: 100%;
+  width: min(350px, 80%);
+  object-fit: contain;
+  filter: drop-shadow(0 12px 8px #0007);
+  pointer-events: none;
+  z-index: 1;
+}
+.boss-target {
+  height: 320px;
+  padding-bottom: 25px;
+}
+.fighting .boss-sprite {
+  animation: bossHover 2.2s ease-in-out infinite alternate;
+}
+.boss-haste.fighting .boss-sprite {
+  animation-duration: 1.2s;
+}
+.boss-aura {
+  width: 260px;
+  height: 260px;
+  border: 0;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in srgb, var(--boss-color) 60%, transparent),
+    transparent
+  );
+  opacity: 0.8;
+}
+.boss-target > span {
+  bottom: 2px;
+}
+.player-status {
+  display: grid;
+  grid-template-columns: auto minmax(80px, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px;
+  background: #101f5788;
+  padding: 9px 12px;
+  font-size: 11px;
+}
+.player-status progress {
+  width: 100%;
+  height: 13px;
+  accent-color: #7bf396;
+}
+.player-status > strong {
+  color: #9bebff;
+  font-size: 11px;
+  min-width: 155px;
+  text-align: right;
+}
+.boss-arena.warning {
+  box-shadow: inset 0 0 55px #ff3d4066;
+  border-color: #ffb35c;
+}
+.warning [data-attack-warning] {
+  color: #fff08a;
+}
+.warning .boss-sprite {
+  filter: drop-shadow(0 0 15px #ff6451);
+  scale: 1.04;
+}
+.dodging .player-status {
+  background: #1679a6;
+  outline: 2px solid #87faff;
+}
+.shielded .player-status {
+  outline: 2px solid #adfa70;
+  background: #23634d;
+}
+.frozen .boss-sprite {
+  filter: drop-shadow(0 0 18px #66efff) hue-rotate(15deg);
+  animation-play-state: paused;
+}
+.chapter-prize {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid #b98aea;
+  border-radius: 12px;
+  margin-top: 15px;
+  padding: 11px;
+  background: linear-gradient(110deg, #55318b, #1b3d83);
+}
+.chapter-prize img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+.chapter-prize > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.chapter-prize strong {
+  font-size: 12px;
+  color: #fff3b2;
+}
+.chapter-prize span {
+  font-size: 11px;
+}
+.chapter-clear {
+  border: 2px solid #ffc952;
+  border-radius: 12px;
+  padding: 12px;
+  background: #563f8e;
+}
+.chapter-clear img {
+  width: 40px;
+  vertical-align: middle;
+}
+.chapter-clear strong {
+  font-size: 14px;
+}
+.chapter-clear p {
+  font-size: 12px;
+}
+@media (min-width: 761px) {
+  .rush-panel .rush-scene {
+    min-height: 295px;
+  }
+  .rush-panel .combat-controls {
+    min-height: 68px;
+    padding-top: 5px;
+    padding-bottom: 17px;
+  }
+  .rush-panel .skill-button > img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 760px) {
+  .boss-target {
+    height: 285px;
+  }
+  .player-status {
+    grid-template-columns: auto 1fr;
+    gap: 7px;
+    font-size: 10px;
+  }
+  .player-status > strong {
+    grid-column: 1/-1;
+    text-align: center;
+    min-width: 0;
+  }
+  .skill-button {
+    padding: 7px;
+    gap: 6px;
+  }
+  .skill-button > img {
+    width: 32px;
+    height: 32px;
+  }
+  .skill-button strong {
+    font-size: 10px;
+  }
+  .skill-button small {
+    font-size: 8px;
+  }
+  .dodge-button {
+    padding: 7px;
+  }
+  .combat-controls {
+    padding-inline: 8px;
+  }
+  .boss-sprite {
+    width: 85%;
+  }
+  .chapter-prize strong {
+    font-size: 10px;
+  }
+  .chapter-prize span {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fighting .boss-sprite {
+    animation: none;
+  }
+}
+main.in-combat > .page-heading {
+  display: none;
+}
+main:has(.boss-arena.fighting) > .chapter-prize,
+main:has(.boss-arena.fighting) > .boss-queue,
+main:has(.boss-arena.fighting) > .arena-info {
+  display: none;
+}
+.fighter-skill {
+  background: #56328c;
+  border: 1px solid #bd88df;
+  padding: 10px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.rush-scene[data-effect="freeze"] {
+  box-shadow: inset 0 0 45px #76e9ff99;
+}
+.rush-scene[data-effect="shield"] {
+  box-shadow: inset 0 0 45px #83f37099;
+}
+.rush-scene[data-effect="haste"] {
+  box-shadow: inset 0 0 45px #ffcb5799;
+}
+.rush-scene[data-effect="summon"] {
+  box-shadow: inset 0 0 45px #dc88ff99;
+}
+@media (min-width: 761px) {
+  .rush-panel .rush-scene {
+    height: clamp(225px, calc(100dvh - 490px), 460px);
+    min-height: 0;
+  }
+  .rush-panel .rush-scene.playing {
+    height: clamp(260px, calc(100dvh - 350px), 600px);
+  }
+  .rush-panel .training-bottom {
+    min-height: 62px;
+    padding: 7px 16px;
+  }
+  .rush-panel .training-bottom .super-button {
+    min-height: 45px;
+    height: 48px;
+    padding: 5px 12px;
+  }
+  .rush-intro {
+    top: 6%;
+  }
+  .rush-intro h2 {
+    font-size: clamp(30px, 3.2vw, 44px);
+    margin-top: 8px;
+    margin-bottom: 7px;
+  }
+  .rush-intro p {
+    font-size: 11px;
+    margin-bottom: 9px;
+  }
+  .rush-start {
+    font-size: 20px;
+    padding: 9px 15px;
+  }
+  .rush-intro small {
+    font-size: 9px;
+  }
+  .fighting.boss-arena {
+    padding: 12px 17px;
+  }
+  .fighting .boss-arena-top h2 {
+    font-size: 20px;
+  }
+  .fighting .boss-arena-top {
+    margin-bottom: 8px;
+  }
+  .fighting .boss-hp {
+    height: 20px;
+  }
+  .fighting .boss-mechanic {
+    margin-top: 4px;
+    min-height: 25px;
+    font-size: 11px;
+  }
+  .fighting .boss-target {
+    height: clamp(165px, calc(100dvh - 540px), 350px);
+  }
+  .fighting .battle-bottom {
+    padding: 8px 12px;
+    margin-top: 6px;
+    min-height: 58px;
+  }
+  .fighting .battle-bottom .super-button {
+    min-height: 45px;
+    padding: 5px 12px;
+  }
+  .fighting .combat-controls {
+    min-height: 67px;
+    margin-top: 6px;
+    padding-top: 5px;
+    padding-bottom: 17px;
+  }
+  .fighting .player-status {
+    padding: 6px 10px;
+  }
+}
+@media (max-width: 760px) {
+  .rush-panel .rush-scene.playing {
+    height: clamp(275px, calc(100dvh - 330px), 520px);
+  }
+  .fighting.boss-arena {
+    padding: 10px;
+  }
+  .fighting .boss-target {
+    height: clamp(190px, calc(100dvh - 470px), 330px);
+  }
+  .fighting .boss-mechanic {
+    font-size: 9px;
+    margin-top: 4px;
+  }
+  .fighting .boss-arena-top h2 {
+    font-size: 17px;
+  }
+  .fighting .battle-bottom {
+    padding: 8px;
+    min-height: 55px;
+    margin-top: 5px;
+  }
+  .fighting .combat-controls {
+    margin-top: 6px;
+  }
+  .fighting .player-status {
+    padding: 5px 8px;
+  }
+  .fighting .boss-hp {
+    height: 20px;
+  }
+}
+@media (max-height: 500px) and (min-width: 761px) {
+  .rush-panel .rush-scene.playing {
+    height: clamp(145px, calc(100dvh - 210px), 260px);
+  }
+  .rush-panel .combat-controls {
+    min-height: 48px;
+    padding: 2px 7px 12px;
+  }
+  .rush-panel .skill-button small {
+    display: none;
+  }
+  .rush-panel .skill-button > img {
+    width: 24px;
+    height: 24px;
+  }
+  .rush-panel .training-bottom {
+    min-height: 42px;
+    padding: 4px 10px;
+  }
+  .fighting .boss-target {
+    height: 110px;
+  }
+  .fighting .boss-arena-top h2 {
+    font-size: 14px;
+  }
+  .fighting .boss-mechanic {
+    display: none;
+  }
+  .fighting .combat-controls {
+    min-height: 48px;
+    padding: 3px 7px 11px;
+  }
+  .fighting .skill-button small {
+    display: none;
+  }
+  .fighting .skill-button > img {
+    width: 22px;
+    height: 22px;
+  }
+  .fighting .player-status {
+    padding: 3px 8px;
+    font-size: 9px;
+  }
+  .fighting .boss-hp {
+    height: 15px;
+  }
+  .fighting .boss-arena-top {
+    margin-bottom: 4px;
+  }
+  .fighting .battle-bottom {
+    min-height: 37px;
+    padding: 3px 8px;
+  }
+  .fighting .battle-bottom .super-button {
+    min-height: 32px;
+  }
+  .fighting .dodge-button img {
+    display: none;
+  }
+  .fighting.boss-arena {
+    padding: 7px 10px;
+  }
+}
+@media (min-width: 761px) and (min-height: 501px) {
+  .rush-panel .rush-scene.playing {
+    height: clamp(235px, calc(100dvh - 375px), 600px);
+  }
+}
+@media (max-width: 760px) {
+  .rush-panel .rush-scene.playing {
+    height: clamp(240px, calc(100dvh - 365px), 520px);
+  }
+}
+@media (max-height: 500px) and (min-width: 761px) {
+  .rush-panel .training-top {
+    min-height: 27px;
+    height: 27px;
+    padding: 3px 8px;
+  }
+  .rush-panel .training-top > .rush-time {
+    font-size: 10px;
+  }
+  .rush-panel .training-top .themed-icon {
+    height: 18px;
+    width: 18px;
+  }
+  .rush-panel .rush-scene.playing {
+    height: calc(100dvh - 270px);
+    min-height: 110px;
+  }
+  .rush-panel .rush-scene.ready {
+    height: 145px;
+    min-height: 0;
+  }
+  .rush-panel .training-bottom {
+    min-height: 42px;
+    height: 42px;
+    padding: 3px 9px;
+  }
+  .rush-panel .training-bottom .super-button {
+    height: 32px;
+    min-height: 32px;
+    padding: 3px 8px;
+  }
+  .rush-panel .training-bottom .gain > b {
+    font-size: 13px;
+  }
+  .rush-panel .training-bottom .gain > span {
+    font-size: 7px;
+  }
+  .rush-target {
+    width: 54px;
+    height: 61px;
+  }
+  .rush-target.rival {
+    width: 50px;
+    height: 55px;
+  }
+  .rush-target.coin,
+  .rush-target.power,
+  .rush-target.bomb,
+  .rush-target.gem {
+    width: 43px;
+    height: 48px;
+  }
+  .target-hp {
+    font-size: 12px;
+  }
+  .rush-combo > strong {
+    font-size: 25px;
+  }
+  .rush-combo {
+    top: 7px;
+    left: 5px;
+  }
+  .rush-callout {
+    font-size: 10px;
+    padding: 4px;
+  }
+  .rush-intro {
+    top: 3%;
+    left: 40%;
+    width: 57%;
+  }
+  .rush-intro h2 {
+    font-size: 25px;
+    margin: 4px 0;
+  }
+  .rush-intro p {
+    font-size: 8px;
+    margin: 3px 0;
+  }
+  .rush-intro .ready-badge {
+    font-size: 7px;
+    padding: 2px 5px;
+  }
+  .rush-intro .ready-badge img {
+    width: 16px;
+    height: 16px;
+  }
+  .rush-start {
+    font-size: 14px;
+    padding: 5px 10px;
+    min-width: 130px;
+  }
+  .rush-intro small {
+    font-size: 7px;
+    margin-top: 3px;
+  }
+  .rush-ready-bot {
+    width: 55px;
+    height: 60px;
+    right: 1%;
+  }
+  .fighting.boss-arena {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 14px;
+    align-items: center;
+    padding: 7px 12px;
+  }
+  .fighting .boss-arena-top,
+  .fighting .boss-hp {
+    grid-column: 1/-1;
+    width: 100%;
+    margin: 0;
+  }
+  .fighting .boss-arena-top h2 {
+    margin: 0;
+    font-size: 15px;
+  }
+  .fighting .boss-arena-top > div > span {
+    font-size: 8px;
+  }
+  .fighting .boss-arena-top > b {
+    font-size: 15px;
+    padding: 4px 8px;
+  }
+  .fighting .boss-target {
+    grid-column: 1;
+    grid-row: 3/6;
+    height: 180px;
+    min-width: 0;
+    padding-bottom: 15px;
+  }
+  .fighting .boss-target > span {
+    font-size: 7px;
+    padding: 4px 8px;
+  }
+  .fighting .boss-aura {
+    width: 150px;
+    height: 150px;
+  }
+  .fighting .player-status {
+    grid-column: 2;
+    grid-row: 3;
+    grid-template-columns: auto 1fr;
+    padding: 4px 8px;
+  }
+  .fighting .player-status > strong {
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 9px;
+  }
+  .fighting .battle-bottom {
+    grid-column: 2;
+    grid-row: 4;
+    margin: 0;
+    padding: 4px 8px;
+    height: 43px;
+    min-height: 43px;
+  }
+  .fighting .battle-bottom .team-slots img {
+    width: 28px;
+    height: 28px;
+  }
+  .fighting .battle-bottom strong {
+    font-size: 12px;
+  }
+  .fighting .battle-bottom > div > span {
+    font-size: 8px;
+  }
+  .fighting .combat-controls {
+    grid-column: 2;
+    grid-row: 5;
+    margin: 0;
+    padding: 3px 5px 12px;
+    min-height: 54px;
+  }
+  .fighting .skill-button {
+    padding: 4px;
+    gap: 4px;
+  }
+  .fighting .skill-button strong {
+    font-size: 9px;
+  }
+  .fighting .skill-button > b {
+    font-size: 9px;
+  }
+  .fighting .dodge-button {
+    padding: 4px;
+  }
+  .fighting .dodge-button strong,
+  .fighting .dodge-button small {
+    font-size: 8px;
+  }
+}
+@media(min-width:761px) and (min-height:501px){.rush-panel .rush-scene.ready{height:clamp(240px,calc(100dvh - 455px),460px)}}
+@media(min-width:761px) and (min-height:501px) and (max-height:800px){.rush-intro{top:4%}.rush-intro h2{font-size:32px;margin:5px 0}.rush-intro p{font-size:10px;line-height:1.4;margin:5px 0 7px}.rush-start{font-size:18px;padding:8px 13px}.rush-intro small{font-size:8px;margin-top:5px}.ready-badge{padding:4px 7px;font-size:9px}}
+@media(max-width:760px) and (max-height:760px){.fighting .boss-target{height:calc(100dvh - 495px);min-height:190px}}
+@media(max-height:500px) and (min-width:761px){.rush-panel .rush-scene.ready{height:160px}}
+@media(min-width:761px) and (min-height:501px){
+ .fighting.boss-arena{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,1fr);grid-template-areas:"title title" "target hp" "target mechanic" "target player" "target team" "target controls";gap:9px 25px;align-items:center;background-image:linear-gradient(90deg,#23458c9c,#173a7be8),url("../public/art/arena.png");background-size:cover;background-position:center;padding:12px 18px}
+ .fighting .boss-arena-top{grid-area:title;margin:0}.fighting .boss-hp{grid-area:hp;width:100%;margin:0;max-width:none;height:23px}.fighting .boss-mechanic{grid-area:mechanic;margin:0;font-size:12px;line-height:1.5;text-align:left;justify-content:flex-start}
+ .fighting .boss-target{grid-area:target;height:clamp(270px,calc(100dvh - 295px),560px);padding-bottom:24px;min-width:0}.fighting .boss-sprite{width:min(420px,95%)}.fighting .boss-target>span{font-size:9px}.fighting .boss-aura{width:85%;height:85%}
+ .fighting .player-status{grid-area:player;grid-template-columns:auto 1fr;min-width:0}.fighting .player-status>strong{grid-column:1/-1;text-align:center;min-width:0}
+ .fighting .battle-bottom{grid-area:team;margin:0;padding:10px;gap:12px;min-width:0;width:100%}.fighting .battle-bottom .team-slots{gap:4px}.fighting .battle-bottom .team-slots img{width:38px;height:38px}.fighting .battle-bottom>div>span{font-size:9px}.fighting .battle-bottom strong{font-size:16px}
+ .fighting .combat-controls{grid-area:controls;margin:0;min-width:0;gap:7px;padding:8px 7px 20px}.fighting .skill-button{padding:7px;gap:6px}.fighting .skill-button>img{width:31px;height:31px}.fighting .skill-button strong{font-size:11px}.fighting .skill-button small{font-size:9px}.fighting .dodge-button{padding:7px}.fighting .dodge-button strong{font-size:9px}
+}
